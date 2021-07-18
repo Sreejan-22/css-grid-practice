@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Lines</title>
+  </head>
+  <style>
+    .heading {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .container {
+      margin: 2rem;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .container > div {
+      padding: 2rem;
+      text-align: center;
+      border-radius: 5px;
+      background-color: rgb(71, 192, 240);
+      color: white;
+    }
+
+    .nested {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+
+      /* span 3 columns from the default grid-column-start position */
+      grid-column: span 3;
+    }
+    .nested p {
+      border: 1px solid white;
+      padding: 20px;
+      margin: 0;
+    }
+  </style>
+  <body>
+    <h1 class="heading">Grid Lines</h1>
+    <!-- <a href="../index.html"><button class="home-btn">Home</button></a> -->
+    <br />
+    <div class="container">
+      <div class="box one">1</div>
+      <div class="box two">2</div>
+      <div class="box three">3</div>
+      <div class="box four nested">
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+        <p>4</p>
+      </div>
+      <div class="box five">5</div>
+      <div class="box six">6</div>
+    </div>
+  </body>
+</html>

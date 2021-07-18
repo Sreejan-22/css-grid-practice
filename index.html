@@ -3,66 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="styles.css" /> -->
-    <title>CSS Grid</title>
+    <title>CSS Grid Practice</title>
   </head>
   <style>
-    * {
-      padding: 0;
-      margin: 0;
-      box-sizing: border-box;
+    .links {
+      margin: 1rem;
     }
-
-    .heading {
-      margin-top: 16px;
-      margin-bottom: 16px;
-      text-align: center;
-    }
-
-    .container {
-      margin: 2rem;
-      display: grid;
-      /* grid-template-columns: 200px 200px 200px 200px; */
-      /* grid-template-columns: 2fr 1fr 1fr; */
-      /* grid-template-columns: repeat(3, 1fr); */
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      grid-auto-rows: minmax(100px, auto);
-      /* grid-template-rows: repeat(3, 300px); */
-      /* column-gap: 20px;
-  row-gap: 10px; */
-      gap: 15px;
-    }
-
-    .container > div {
-      border-radius: 5px;
-      padding: 10px;
-      background-color: rgb(207, 232, 220);
-      border: 2px solid rgb(79, 185, 227);
+    button {
+      cursor: pointer;
     }
   </style>
   <body>
-    <h1 class="heading">Grid</h1>
-    <br /><br />
-    <!-- <a href="./pages/grid/gridAreas.html"
-      ><button>Click here to view Grid Area Demo</button></a
-    > -->
-    <br /><br />
-    <div class="container">
-      <div class="box">Item one</div>
-      <div class="box">Item two</div>
-      <div class="box">Item three</div>
-      <div class="box">Item four</div>
-      <!-- <div class="box">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat
-        perspiciatis doloribus reiciendis quas nihil exercitationem fuga ducimus
-        corrupti explicabo et voluptas nam facilis similique animi pariatur, ab
-        at quasi.
-      </div> -->
-      <div class="box">Item five</div>
-      <div class="box">Item six</div>
-      <div class="box">Item seven</div>
-      <div class="box">Item eight</div>
-      <div class="box">Item nine</div>
+    <h1 style="text-align: center">CSS Grid Practice</h1>
+    <br /><br /><br /><br />
+    <div style="display: flex; justify-content: center; align-items: center">
+      <a href="./pages/basics.html" class="links"><button>Basics</button></a>
+      <a href="./pages/grid_lines.html" class="links"
+        ><button>Grid Lines</button></a
+      >
+      <a href="./pages/nested_grids.html" class="links"
+        ><button>Nested Grids</button></a
+      >
     </div>
   </body>
 </html>
