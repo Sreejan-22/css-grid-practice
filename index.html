@@ -3,101 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>Image Carousel</title>
+    <!-- <link rel="stylesheet" href="styles.css" /> -->
+    <title>CSS Grid</title>
   </head>
-  <body>
-    <div id="app">
-      <h1 class="heading">Image Carousel</h1>
-      <br /><br /><br /><br />
-      <div class="carousel-container-wrapper">
-        <div class="carousel-container">
-          <!-- <button class="left-btn"> -->
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            fill="black"
-            class="bi bi-chevron-left left-arrow"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"
-            />
-          </svg>
-          <img
-            src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dXNhfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt=""
-            class="carousel-img"
-          />
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
 
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="28"
-            fill="black"
-            class="bi bi-chevron-right right-arrow"
-            viewBox="0 0 16 16"
-          >
-            <path
-              fill-rule="evenodd"
-              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
-            />
-          </svg>
-          <!-- </button> -->
-        </div>
-        <div class="carousel-navigators">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="10"
-            height="10"
-            fill="currentColor"
-            class="bi bi-circle-fill filled-circle"
-            viewBox="0 0 16 16"
-          >
-            <circle cx="8" cy="8" r="8" />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="10"
-            height="10"
-            fill="currentColor"
-            class="bi bi-circle outline-circle"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="10"
-            height="10"
-            fill="currentColor"
-            class="bi bi-circle outline-circle"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="10"
-            height="10"
-            fill="currentColor"
-            class="bi bi-circle outline-circle"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
-            />
-          </svg>
-        </div>
-      </div>
+    .heading {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .container {
+      margin: 2rem;
+      display: grid;
+      /* grid-template-columns: 200px 200px 200px 200px; */
+      /* grid-template-columns: 2fr 1fr 1fr; */
+      /* grid-template-columns: repeat(3, 1fr); */
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-auto-rows: minmax(100px, auto);
+      /* grid-template-rows: repeat(3, 300px); */
+      /* column-gap: 20px;
+  row-gap: 10px; */
+      gap: 15px;
+    }
+
+    .container > div {
+      border-radius: 5px;
+      padding: 10px;
+      background-color: rgb(207, 232, 220);
+      border: 2px solid rgb(79, 185, 227);
+    }
+  </style>
+  <body>
+    <h1 class="heading">Grid</h1>
+    <br /><br />
+    <!-- <a href="./pages/grid/gridAreas.html"
+      ><button>Click here to view Grid Area Demo</button></a
+    > -->
+    <br /><br />
+    <div class="container">
+      <div class="box">Item one</div>
+      <div class="box">Item two</div>
+      <div class="box">Item three</div>
+      <div class="box">Item four</div>
+      <!-- <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius quaerat
+        perspiciatis doloribus reiciendis quas nihil exercitationem fuga ducimus
+        corrupti explicabo et voluptas nam facilis similique animi pariatur, ab
+        at quasi.
+      </div> -->
+      <div class="box">Item five</div>
+      <div class="box">Item six</div>
+      <div class="box">Item seven</div>
+      <div class="box">Item eight</div>
+      <div class="box">Item nine</div>
     </div>
-    <script src="assets.js"></script>
-    <script src="script.js"></script>
   </body>
 </html>
