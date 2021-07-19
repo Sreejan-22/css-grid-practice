@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Align and Justify Items</title>
+  </head>
+  <style>
+    .heading {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .container {
+      text-align: center;
+      margin: 2rem;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      gap: 10px;
+    }
+
+    .container > * {
+      background-color: rgb(71, 192, 240);
+      padding: 30px;
+      color: white;
+    }
+
+    header {
+      grid-column: 1 / 13;
+    }
+    
+    main {
+      grid-column: 3 / 13;
+      grid-row: 2 / 4;
+    }
+
+    section {
+      grid-column: 1 / 13;
+      grid-row: 4 / 6;
+    }
+
+    aside {
+      grid-column: 1 / 3;
+    }
+
+    nav {
+      grid-column: 1 / 3;
+    }
+
+    nav {
+      grid-column: 1 / 3;
+    }
+
+    footer {
+      grid-column: 1 / 13;
+    }
+  </style>
+  <body>
+    <h3 class="heading">Align and Justify Items</h3>
+    <div class="container">
+      <header>Header</header>
+      <main>Main</main>
+      <section>Section</section>
+      <aside>Aside</aside>
+      <nav>Nav</nav>
+      <footer>Footer</footer>
+  </body>
+</html>
