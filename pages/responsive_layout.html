@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout</title>
+  </head>
+  <style>
+    .heading {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      text-align: center;
+    }
+
+    .container {
+      /* height: 500px; */
+      margin: 2rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: minmax(100px, auto);
+      gap: 10px;
+      grid-template-areas:
+        "header header header header"
+        "footer footer footer footer"
+        "main main main main"
+        "main main main main"
+        "aside aside nav nav"
+        "section section section section"
+        "section section section section";
+    }
+
+    @media screen and (min-width: 760px) {
+      .container {
+        /* height: 500px; */
+        margin: 2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        gap: 10px;
+        grid-template-areas:
+          "header header header header"
+          "aside aside main main"
+          "nav nav main main"
+          "section section section section"
+          "section section section section"
+          "footer footer footer footer";
+      }
+    }
+
+    .container > * {
+      padding: 2rem;
+      text-align: center;
+      /* border-radius: 5px; */
+      background-color: rgb(71, 192, 240);
+      color: white;
+    }
+
+    /* To make use of grid areas, we need to give each element a grid area name */
+    /* we can give any name we find suitable */
+    header {
+      grid-area: header;
+    }
+
+    main {
+      grid-area: main;
+    }
+
+    section {
+      grid-area: section;
+    }
+
+    aside {
+      grid-area: aside;
+    }
+
+    nav {
+      grid-area: nav;
+    }
+
+    footer {
+      grid-area: footer;
+    }
+  </style>
+  <body>
+    <h1 class="heading">Responsive Layout</h1>
+    <div class="container">
+      <header>Header</header>
+      <main>Main</main>
+      <section>Section</section>
+      <aside>Aside</aside>
+      <nav>Nav</nav>
+      <footer>Footer</footer>
+    </div>
+  </body>
+</html>
